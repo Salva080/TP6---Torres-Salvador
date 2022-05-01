@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TrabajoPracticoSIX">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="88.0" yPosition="64.0">
+      <Fields>
+        <Field name="dni" type="long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="dni"/>
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="String" name="c"/>
+          <Argument type="String" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setDni" returnType="long" visibility="public">
+          <Argument type="long" name="dni"/>
+        </Method>
+        <Method name="getDni" returnType="long" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Directorio" package="" visibility="private" xPosition="582.0" yPosition="137.0">
+      <Fields>
+        <Field name="lista" type="TreeMap" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarCliente" returnType="Cliente" visibility="public">
+          <Argument type="Long" name="telefono"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="buscarCliente" returnType="Long" visibility="public">
+          <Argument type="Long" name="telefono"/>
+        </Method>
+        <Method name="buscarTelefono" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="buscarClientes" returnType="String" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="borrarCliente" returnType="Long" visibility="public">
+          <Argument type="Long" name="tel"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="" visibility="public" xPosition="88.0" yPosition="359.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="viewBuscarClientes" package="" visibility="public" xPosition="474.0" yPosition="381.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="viewAgregarCliente" package="" visibility="public" xPosition="114.0" yPosition="533.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ViewBorrarClientes" package="" visibility="public" xPosition="320.0" yPosition="498.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="lista" source="Directorio" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation name="" source="Menu" target="viewBuscarClientes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Menu" target="ViewBorrarClientes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directorio" source="Menu" target="Directorio" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Menu" target="viewAgregarCliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
