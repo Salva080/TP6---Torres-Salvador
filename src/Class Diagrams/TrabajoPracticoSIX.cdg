@@ -2,7 +2,7 @@
 
 <ClassDiagram name="TrabajoPracticoSIX">
   <ClassDiagramComponents>
-    <Class name="Cliente" package="" visibility="public" xPosition="88.0" yPosition="64.0">
+    <Class name="Cliente" package="" visibility="public" xPosition="223.0" yPosition="23.0">
       <Fields>
         <Field name="dni" type="long" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -26,7 +26,7 @@
         <Method name="getDni" returnType="long" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Directorio" package="" visibility="private" xPosition="582.0" yPosition="137.0">
+    <Class name="Directorio" package="" visibility="private" xPosition="685.0" yPosition="102.0">
       <Fields>
         <Field name="lista" type="TreeMap" visibility="private"/>
       </Fields>
@@ -50,32 +50,43 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Menu" package="" visibility="public" xPosition="88.0" yPosition="359.0">
+    <Class name="Menu" package="" visibility="public" xPosition="432.0" yPosition="404.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="viewBuscarClientes" package="" visibility="public" xPosition="474.0" yPosition="381.0">
+    <Class name="viewBuscarClientes" package="" visibility="public" xPosition="781.0" yPosition="415.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="viewAgregarCliente" package="" visibility="public" xPosition="114.0" yPosition="533.0">
+    <Class name="viewAgregarCliente" package="" visibility="public" xPosition="312.0" yPosition="566.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="ViewBorrarClientes" package="" visibility="public" xPosition="320.0" yPosition="498.0">
+    <Class name="ViewBorrarClientes" package="" visibility="public" xPosition="623.0" yPosition="543.0">
       <Fields/>
       <Constructors/>
       <Methods/>
+    </Class>
+    <Class name="main" package="" visibility="public" xPosition="106.0" yPosition="299.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
+    <UseRelation name="" source="Menu" target="viewAgregarCliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="main" target="Directorio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="main" target="Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directorio" source="Menu" target="Directorio" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="lista" source="Directorio" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
     <UseRelation name="" source="Menu" target="viewBuscarClientes" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="" source="Menu" target="ViewBorrarClientes" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="directorio" source="Menu" target="Directorio" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="Menu" target="viewAgregarCliente" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
